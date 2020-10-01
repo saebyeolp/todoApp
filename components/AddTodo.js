@@ -15,14 +15,12 @@ const AddTodo = (props) => {
     return (
         <View style={Styles.AddTodoBox}>
             <Form style={Styles.formStyle}>
-                <Text style={Styles.title}>Add item</Text>
                 <Item style={Styles.formBox}>
                     <Input
                         style={Styles.textInput}
-                        placeholder={'Item'}
+                        placeholder={'Add a New Task'}
                         onChangeText={(text) => handleInput('text', text)}
                         value={todo.text}
-                        // onChange={handleInput}
                         onSubmitEditing={() => {
                             if (!todo.text) return;
 

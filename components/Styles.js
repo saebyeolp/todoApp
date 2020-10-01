@@ -14,6 +14,11 @@ const Styles = StyleSheet.create({
       height: '100%',
       flex: 1,
     },
+    emptyBox: {
+      textAlign: 'center',
+      paddingTop: 20,
+      fontSize: 20,
+    },
 
     // TodoItems
     itemWrapper: {
@@ -54,6 +59,8 @@ const Styles = StyleSheet.create({
 
     //AddTodo
     AddTodoBox: {
+      paddingTop: 40,
+      paddingRight: 12,
     },
     formStyle: {
       padding: 0,
@@ -76,30 +83,17 @@ const Styles = StyleSheet.create({
     },
 
     //editTodo
-    formStyle: {
-      padding: 0,
-      margin: 0,
-    },
-    formBox: {
-      display: 'flex',
-      position:'relative',
-    },
-    title: {
-      marginTop:10,
-    },
-    textInput: {
+    textInputEdit: {
       borderWidth:1,
-      borderColor:'#969696',
+      borderColor:'#ccc',
       height:55,
-      paddingLeft: 20,
       marginBottom: 25,
       marginTop: 10,
       borderRadius: 5,
+      backgroundColor: '#ebebeb'
     },
-    cancelBtn : {
-      position:'absolute',
-      right:5,
-      top:15,
+    editBtn : {
+
     },
 });
   

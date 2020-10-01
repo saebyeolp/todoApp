@@ -1,8 +1,6 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
 import {Item, Text, View, Button} from 'native-base';
 import Icon from 'react-native-vector-icons/Feather';
-import {SwipeRow} from 'react-native-swipe-list-view';
 import Styles from './Styles';
 
 
@@ -35,9 +33,13 @@ const TodoItems = (props) => (
                 <Button 
                     transparent
                     style={Styles.editBtn}
+                    onPress={props.update}
+                    onPress={() => {
+                        props.editTodoRow(props)
+                      }}
                 >
                     <Icon 
-                        name="more-horizontal"
+                        name="edit"
                         color="#333"
                         size={25}
                     />
@@ -51,7 +53,7 @@ const TodoItems = (props) => (
                     onPress={props.delete}
                 >
                     <Icon 
-                        name="x-circle"
+                        name="trash"
                         color="#333"
                         size={25}
                     />
