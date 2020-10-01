@@ -7,11 +7,57 @@ import Styles from './Styles';
 
 
 const TodoItems = (props) => (
-    <Item style={Styles.listWrapper}>
-        <View>
-            <Text>
-                {props.text}
-            </Text>
+    <Item style={Styles.itemWrapper}>
+        <View style={Styles.itemContainer}>
+            
+            <View style={Styles.checkBoxContainer}>
+                <Button 
+                    transparent
+                    onPress={() => props.setChecked()}
+                >
+                    <Icon
+                        name={props.checked ? 'check-circle' : 'circle' }
+                        size={25}
+                        color="#333"
+                    />
+                </Button>
+            </View>
+
+            <View style={Styles.todoContainer}>
+                 <Text 
+                    style={(props.checked == true) ? Styles.done : Styles.notDone}
+                >
+                    {props.text}
+                </Text>
+            </View>
+
+            <View style={Styles.editBtnContainer}>
+                <Button 
+                    transparent
+                    style={Styles.editBtn}
+                >
+                    <Icon 
+                        name="more-horizontal"
+                        color="#333"
+                        size={25}
+                    />
+                </Button>
+            </View>
+
+            <View style={Styles.deleteBtnContainer}>
+                <Button 
+                    transparent
+                    style={Styles.deleteBtn}
+                    onPress={props.delete}
+                >
+                    <Icon 
+                        name="x-circle"
+                        color="#333"
+                        size={25}
+                    />
+                </Button>
+            </View>
+
         </View>
     </Item>
 );

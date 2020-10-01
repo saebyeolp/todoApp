@@ -3,74 +3,78 @@ import {StyleSheet} from 'react-native';
 
 const Styles = StyleSheet.create({
     container: {
+      width: '100%',
+      height: '100%',
       flex: 1,
-      backgroundColor: '#FFFFFF',
       alignItems: 'center',
       justifyContent: 'center',
     },
     content: {
-      padding: 20,
-    },
-    // TodoItems
-    listWrapper: {
       width: '100%',
-      minHeight: 0,
+      height: '100%',
+      flex: 1,
+    },
+
+    // TodoItems
+    itemWrapper: {
+      width: '100%',
       flex: 1,
       flexDirection: 'row',
-      paddingTop: 0,
-      paddingBottom: 0,
+    },
+    itemContainer: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'row',
+      paddingTop: 3,
+      paddingBottom: 3,
+    },
+    checkBoxContainer: {
+      flex : 1,
+      marginLeft: 10,
+    },
+    todoContainer: {
+      flex: 7,
+      paddingTop: 12,
+      paddingBottom: 10,
+      lineHeight: 1.4
+    },
+    editBtnContainer: {
+      flex: 1,
+      backgroundColor: 'white',
+    },
+    deleteBtnContainer: {
+      flex: 1,
     },
     done: {
       textDecorationLine: 'line-through',
       color: '#555',
-      paddingTop: 4,
     },
     notDone: {
-      fontWeight: 'bold',
-      paddingTop: 4,
     },
-    swipecontainer: {
-      backgroundColor: 'white',
-      flex: 1,
+
+    //AddTodo
+    AddTodoBox: {
     },
-    standalone: {
-      paddingTop: 2,
-      paddingBottom: 2,
+    formStyle: {
+      padding: 0,
+      margin: 0,
     },
-    standaloneRowFront: {
-      backgroundColor: '#FFF',
-      justifyContent: 'center',
-      minHeight: 50,
-      flexDirection: 'row',
-      paddingLeft: 20,
-      paddingTop: 10,
+    formBox: {
+      display: 'flex',
     },
-    standaloneRowBack: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      padding: 5,
+    title: {
+      marginTop: 10,
+      fontSize: 20,
     },
-    editBtn: {
-      textAlign: 'center',
-      backgroundColor: '#848484',
-      color: '#FFF',
-      height: '100%',
+    textInput: {
+      borderWidth:1,
+      borderColor:'#969696',
+      height:55,
+      marginBottom: 25,
+      marginTop: 10,
+      borderRadius: 5,
     },
-    deleteBtn: {
-      textAlign: 'center',
-      backgroundColor: '#848484',
-      borderRadius: 3,
-      height: '100%',
-    },
-    btnText: {
-      color: '#FFF',
-      textTransform: 'capitalize',
-    },
-    backTextWhite: {
-      color: '#FFF',
-    },
+
     //editTodo
     formStyle: {
       padding: 0,
